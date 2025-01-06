@@ -1,0 +1,161 @@
+/* Базовые стили */
+.generation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #0f1116;
+    color: #ffffff;
+    font-family: 'Roboto mono';
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.section {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #32CD32;
+}
+
+/* Стили для сохранённых интересов */
+.saved-interests {
+    list-style: none;
+    padding: 0;
+}
+
+.saved-interest {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.saved-interest span {
+    flex: 1;
+}
+
+.remove-button {
+    background: none;
+    border: none;
+    color: #32CD32;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.remove-button:hover {
+    color: #218821;
+}
+
+/* Стили для полей ввода даты */
+.date-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.date-input {
+    padding: 10px;
+    border: 2px solid #32CD32;
+    border-radius: 5px;
+    background-color: #0f1116;
+    color: #ffffff;
+    font-family: 'Roboto mono';
+    width: 100%;
+}
+
+/* Стили для кнопки "Начать генерацию" */
+.generate-button {
+    background-color: #32CD32;
+    color: #0f1116;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease-in-out;
+    animation: pulse 2s infinite;
+    width: 100%;
+}
+
+.generate-button:hover {
+    background-color: #218821;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Стили для таблицы рекомендаций */
+.recommendations-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.recommendations-table th, .recommendations-table td {
+    border: 2px solid #32CD32;
+    padding: 10px;
+    text-align: left;
+}
+
+.recommendations-table th {
+    background-color: #0f1116;
+    color: #32CD32;
+}
+
+.recommendations-table td {
+    background-color: #0f1116;
+    color: #ffffff;
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 767px) {
+    .generation-container {
+        padding: 10px;
+    }
+
+    .date-inputs {
+        flex-direction: column;
+    }
+
+    .recommendations-table, .recommendations-table thead, .recommendations-table tbody, 
+    .recommendations-table th, .recommendations-table td, .recommendations-table tr {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .recommendations-table tr {
+        margin-bottom: 10px;
+    }
+
+    .recommendations-table th, .recommendations-table td {
+        text-align: left;
+        padding: 10px;
+        position: relative;
+    }
+
+    .recommendations-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}

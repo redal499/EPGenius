@@ -1,0 +1,87 @@
+/* Базовые стили */
+.tvgid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #0f1116;
+    color: #ffffff;
+    font-family: 'Roboto mono';
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.section {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #32CD32;
+}
+
+/* Стили для таблицы телепрограммы */
+.tvgid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tvgid-table th, .tvgid-table td {
+    border: 2px solid #32CD32;
+    padding: 10px;
+    text-align: left;
+}
+
+.tvgid-table th {
+    background-color: #0f1116;
+    color: #32CD32;
+}
+
+.tvgid-table td {
+    background-color: #0f1116;
+    color: #ffffff;
+}
+
+.tvgid-row:hover {
+    background-color: #32CD32;
+    color: #0f1116;
+    cursor: pointer;
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 767px) {
+    .tvgid-container {
+        padding: 10px;
+    }
+
+    .tvgid-table, .tvgid-table thead, .tvgid-table tbody, 
+    .tvgid-table th, .tvgid-table td, .tvgid-table tr {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .tvgid-table tr {
+        margin-bottom: 10px;
+    }
+
+    .tvgid-table th, .tvgid-table td {
+        text-align: left;
+        padding: 10px;
+        position: relative;
+    }
+
+    .tvgid-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}

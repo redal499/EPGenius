@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+/* Базовые стили */
+body {
+    background-color: #0f1116;
+    color: #ffffff;
+    font-family: 'Roboto mono';
+    margin: 20px;
+    padding: 0; /* Убираем дефолтные отступы */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Центрирование текста */
+    max-width: 800px; /* Ограничиваем максимальную ширину */
+    padding: 20px; /* Добавляем внутренние отступы */
+    margin: 20px;
+}
+
+/* Стили для заголовка */
+h1 {
+    font-size: 2.5rem; /* Уменьшаем размер шрифта для мобильных */
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #32CD32;
+    font-size: 1.2em;
+    position: relative;
+    display: inline-block;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #32CD32;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.highlight:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* Стили для подзаголовка и описания */
+.subtitle {
+    font-size: 1.2rem; /* Уменьшаем размер шрифта для мобильных */
+    color: #c0c0c0;
+    margin-bottom: 15px; /* Отступ между строками */
+}
+
+.description {
+    font-size: 1rem;
+    color: #c0c0c0;
+    margin-bottom: 30px;
+}
+
+/* Стили для контейнера шагов */
+.steps-container {
+    display: flex;
+    flex-direction: column; /* Выстраиваем в колонку на мобильных */
+    align-items: center; /* Центрируем по горизонтали */
+    margin-bottom: 40px;
+}
+
+
+/* Стили для каждого шага */
+.step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.step-icon {
+    width: 80px; /* Размер иконок */
+    height: 80px;
+    margin-right: 15px;
+}
+.step-text {
+    font-size: 1rem;
+    text-align: left; /* Выравниваем текст по левому краю */
+    max-width: 600px; /* Ограничиваем максимальную ширину текста */
+}
+
+/* Стили для кнопки */
+.try-button {
+    background-color: #32CD32;
+    color: #0f1116;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease-in-out;
+    font-family: 'Roboto mono';
+}
+
+.try-button:hover {
+    background-color: #218821;
+}
+
+
+/* Медиазапросы для адаптивности */
+@media (min-width: 768px) {
+    /* Для экранов больше 768px */
+    h1 {
+        font-size: 3rem;
+    }
+
+     .steps-container {
+        flex-direction: row; /* Выстраиваем в строку на больших экранах */
+       justify-content: space-evenly; /* Равномерное распределение шагов */
+        margin-bottom: 40px;
+     }
+     .step {
+       margin-bottom: 0; /* Убираем отступы между шагами */
+       flex-direction: column;
+       text-align: center;
+    }
+      .step-text {
+        text-align: center;
+     }
+}
+
+@media (max-width: 767px) {
+    #hero {
+        padding: 0;
+        margin: 0;
+    }
+
+    .subtitle, .description {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
