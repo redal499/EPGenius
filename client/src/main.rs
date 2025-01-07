@@ -1,3 +1,4 @@
+//main.rs
 use dioxus::prelude::*;
 
 use components::{Hero, Account, Interests, Generation, Tvgid, Navbar};

@@ -1,3 +1,4 @@
+//navbar.rs
 use crate::Route;
 use dioxus::prelude::*;
 use crate::IsAuthorized;

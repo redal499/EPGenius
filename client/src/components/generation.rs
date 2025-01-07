@@ -1,3 +1,4 @@
+//generation.rs
 use dioxus::prelude::*;
 
 const GENERATION_CSS: Asset = asset!("/assets/styling/generation.css");
