@@ -40,8 +40,8 @@
 1.  Убедитесь, что у вас установлен Rust.
 2.  Клонируйте репозиторий:
     ```bash
-    git clone <your-repo-url>
-    cd <your-repo-folder>
+    git clone https://github.com/redal499/EPGenius.git
+    cd EPGenius.git
     ```
 3.  Запустите сервер:
     ```bash
@@ -97,7 +97,6 @@ epgenius/
     ├── navbar.rs   # Компонент навигации
     └── tvgid.rs    # Компонент ТВ-гида
     
-
 ├── Cargo.toml     # Файл конфигурации Rust
 └── README.md       # Этот файл
 ```
