@@ -1,4 +1,4 @@
-# 📺 EPGenius - Интеллектуальный Гид по IPTV 🤖
+# 📺 EPGenius - Интеллектуальный Гид по IPTV 🤖 (Автор: Редаль Габдулхаков)
 
 [![Rust](https://img.shields.io/badge/rust-v1.70+-orange.svg)](https://www.rust-lang.org/)
 [![Warp](https://img.shields.io/badge/warp-v0.3-blue.svg)](https://crates.io/crates/warp)
